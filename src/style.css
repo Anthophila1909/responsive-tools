@@ -8,7 +8,6 @@ h1,
 h2,
 h3 {
   text-align: center;
-  margin: 0;
 }
 
 h1 {
@@ -21,6 +20,11 @@ main h1 {
 
 h2 {
   font-size: 48px;
+  text-align: center;
+}
+
+div div h2 {
+  text-align: left;
 }
 
 h3 {
@@ -53,11 +57,24 @@ p {
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: white;
+  transition: 160ms ease-in-out;
+}
+
+.contact-link:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .about-link {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  transition: 160ms ease-in-out;
+}
+
+.about-link:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .homepage-link {
@@ -89,8 +106,43 @@ p {
   color: var(--primary-color);
   font-size: 28px;
   text-decoration: none;
+  margin-bottom: 50px;
 }
 
 .email-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  main h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  div div h2 {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .app-link {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+  }
+
+  .email-link {
+    font-size: 25px;
+  }
 }
